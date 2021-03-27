@@ -1,24 +1,11 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+  A basic CRUD app in which Admins can create new users and assign them temporary password.
+  So the user can reset it latter.
 
 * Ruby version
-
-* System dependencies
-
+  `2.7.2`
+* Rails version
+  `5.2.4.5`
 * Configuration
+  `rake db:setup`
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
