@@ -4,7 +4,7 @@ class Admin::UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.where.not(id: current_user.id)
   end
 
   # GET /users/1
