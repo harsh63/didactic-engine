@@ -9,4 +9,4 @@
 * Configuration
   `rake db:setup`
 
-Screenshot 2021-03-27 at 10.26.36 PM![image](https://user-images.githubusercontent.com/16996760/112729061-4c963480-8f50-11eb-87cd-91f8b9190403.png)
+Snapshot[image](https://user-images.githubusercontent.com/16996760/112729061-4c963480-8f50-11eb-87cd-91f8b9190403.png)
