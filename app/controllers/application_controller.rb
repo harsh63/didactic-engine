@@ -14,4 +14,12 @@ class ApplicationController < ActionController::Base
       user.permit(:full_name, :email, :password, :current_password, :phone_number, :company_name, :company_address)
     end
   end
+
+  def after_sign_in_path_for(resource)
+    resource.admin? ? admin_users_path : dashboard_path
+  end
+
+  def after_sending_reset_password_instructions_path_for(resource)
+    resource.admin? ? admin_users_path : dashboard_path
+  end
 end
