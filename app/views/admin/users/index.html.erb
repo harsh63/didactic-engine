@@ -1,23 +1,57 @@
-<h1>Users</h1>
+<div class='ui container'>
+    <%= link_to 'New User', new_admin_user_path , class: 'ui right floated secondary button'%>
+</div>
+<div class="ui container">
+  <h1>Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', admin_user_path(user) %></td>
-        <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
-        <td><%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New User', new_admin_user_path %>
+  <div class="ui three column grid">
+      <% @users.each do |user| %>
+      <div class="column">
+          <div class="ui fluid card">
+              <div class="content">
+                <%= link_to 'Destroy', admin_user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: 'right floated like icon' %>
+                <div class="header"><%= user.full_name%></div>
+                <div class="description">
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="mobile icon"></i>
+                      <div class="content">
+                        <%= user.phone_number%>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="marker icon"></i>
+                      <div class="content">
+                        <%= user.company_address %>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="mail icon"></i>
+                      <div class="content">
+                        <a href="mailto:<%= user.email%>"><%= user.email%></a>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <i class="building icon"></i>
+                      <div class="content">
+                        <%= user.company_name%>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="left floated like">
+                  <i class="file icon"></i>
+                  <%= link_to 'Show', admin_user_path(user) %>
+                </span>
+                <span class="right floated star">
+                  <i class="edit icon"></i>
+                  <%= link_to 'Edit', edit_admin_user_path(user) %>
+                </span>
+              </div>
+          </div>
+      </div>
+      <% end %>
+  </div>
+</div>

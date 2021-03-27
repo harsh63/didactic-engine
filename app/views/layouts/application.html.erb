@@ -11,7 +11,16 @@
 
   <body>
     <%= render partial: 'shared/header' %>
-    <p class="notice"><%= notice %></p>
+    <% if notice%>
+      <div class="ui container">
+        <div class="ui success message">
+          <i class="close icon"></i>
+          <div class="header">
+            <%= notice %>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>

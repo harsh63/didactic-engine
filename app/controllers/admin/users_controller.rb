@@ -58,6 +58,6 @@ class Admin::UsersController < ApplicationController
 
   # Only allow admin users to perform actions
   def check_permission
-    redirect_to dashboard_path, notice: 'You are not authorised to perform this action.' unless current_user.admin?
+    redirect_to dashboard_path, notice: 'You are not authorised to perform this action.' unless current_user&.admin?
   end
 end
