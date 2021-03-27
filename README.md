@@ -9,4 +9,6 @@
 * Configuration
   `rake db:setup`
 
-Snapshot[image](https://user-images.githubusercontent.com/16996760/112729061-4c963480-8f50-11eb-87cd-91f8b9190403.png)
+Screenshot 
+![image](https://user-images.githubusercontent.com/16996760/112729147-b7e00680-8f50-11eb-95c5-f0a312837d53.png)
+
